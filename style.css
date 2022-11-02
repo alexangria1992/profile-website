@@ -39,6 +39,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
+    /* bottom: 0; */
     z-index: 200;
 }
 
@@ -67,11 +68,32 @@ nav .menu-items a {
     color: var(--dark-color);
 }
 
+nav .search-icon-container {
+    position: relative;
+    margin-right: 35px;
+    cursor: pointer;
+    /* background: red; */
+}
+
+nav .search-icon-container img {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(6px);
+    pointer-events: none;
+    transition: all 400ms ease;
+}
+
+nav .search-icon-container .search-icon.active,
+nav .search-icon-container .close-icon.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
 /* Hero Section */
 
 .hero-section {
     background: lightgreen;
-    height: 100vh;
     /* background: var(--orange-color); */
 }
 
@@ -160,5 +182,35 @@ nav .menu-items a {
     display: flex;
     align-items: center;
     gap: 42px;
+}
+
+/* Search  */
+
+.search-input-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 1040px;
+    margin: 0 auto;
+    background: red;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-input-container input.active {
+    transform: translateY(72px);
+}
+
+.search-input-container input {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 0px 8px 8px;
+    background: var(--light-color);
+    font-size: 20px;
+    padding: 12px 32px;
+    border: none;
+    outline: none;
+    transition: all 400ms ease;
 }
 /* Hidden Items */
