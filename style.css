@@ -31,7 +31,8 @@ a {
 /* Navigation */
 
 nav {
-    background: lightpink;
+    /* background: lightpink; */
+    background: var(--light-color);
     height: 72px;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -65,3 +66,99 @@ nav .menu-items a {
     font-size: 20px;
     color: var(--dark-color);
 }
+
+/* Hero Section */
+
+.hero-section {
+    background: lightgreen;
+    height: 100vh;
+    /* background: var(--orange-color); */
+}
+
+.hero-section .wrapper {
+    display: flex;
+    /* background: lightyellow; */
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh - 72px);
+    margin-top: 72px;
+    z-index: 10;
+    position: relative;
+}
+
+.hero-section h1 {
+    font-weight: 900;
+    font-size: 64px;
+    margin: 0;
+}
+
+.hero-section p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 42px;
+    width: 420px;
+}
+
+.hero-section .btn {
+    font-size: 20px;
+    border-radius: 8px;
+    background: var(--teal-green-color);
+    padding: 12px 36px;
+    color: var(--light-color);
+    display: inline-block;
+    transition: all 400ms ease;
+}
+
+.hero-section .btn:hover {
+    transform: translateY(-8px);
+}
+
+.hero-section .right {
+    margin-top: 72px;
+}
+
+.hero-section .hero-image-container {
+    height: 360px;
+    width: 360px;
+    position: relative;
+    isolation: isolate;
+}
+
+.hero-section .hero-image-container .hero-image-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 360px;
+    width: 360px;
+    background: var(--teal-green-color);
+    transform: rotate(-6deg);
+    z-index: -1;
+}
+
+.hero-section .hero-image-container img {
+    height: 360px;
+}
+
+.hero-section .hero-image-container:hover .hero-image {
+    transform: rotateZ(-6deg);
+}
+
+.hero-section .hero-image-container:hover .hero-image {
+    transition: all 400ms ease;
+}
+
+.bg-shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.hero-section .social {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+/* Hidden Items */
